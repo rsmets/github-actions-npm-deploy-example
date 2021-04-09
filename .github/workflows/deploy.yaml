@@ -95,7 +95,7 @@ jobs:
           node-version: 12.x
 
       - name: Install dependencies
-        run: npm install
+        run: yarn
 
       - name: Update source code
         run: |
@@ -114,7 +114,7 @@ jobs:
           author_email: admin@unum.id
           message: '[Release] ${{ env.RELEASE_VERSION }}'
           add: 'package.json'
-          # branch: actions
+          branch: main
 
   # checks:
   #   if: github.event_name != 'push'
