@@ -1,6 +1,6 @@
 {
   "name": "@rsmets/github-actions-npm-deploy-example",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "test",
   "main": "build/index.js",
   "scripts": {
