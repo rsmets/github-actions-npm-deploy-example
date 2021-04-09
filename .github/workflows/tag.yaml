@@ -24,7 +24,8 @@ jobs:
           echo $TAG_VERSION
           echo ${{ env.TAG_VERSION }}
 
-      - name: Get Tag message
+      - name: Get and set tag message
         run: |
           git fetch --depth=1 origin +refs/tags/*:refs/tags/*
           git tag -l --format='%(contents:subject)' ${GITHUB_REF#refs/*/}
+          echo "TAG_MESSAGE=${git tag -l --format='%(contents:subject)' ${GITHUB_REF#refs/*/}}" >> $GITHUB_ENV
