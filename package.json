@@ -1,9 +1,9 @@
 {
   "name": "@rsmets/github-actions-npm-deploy-example",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "test",
   "main": "build/index.js",
-   "scripts": {
+  "scripts": {
     "pm2": "pm2",
     "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
     "build": "rm -rf build/ && tsc src/index.ts",
