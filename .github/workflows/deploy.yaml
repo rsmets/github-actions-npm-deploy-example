@@ -110,12 +110,19 @@ jobs:
           npx typedoc src/index.ts
           
         #- npm publish
-      - name: Npm publish
+      - name: NPM package publish
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: public
           registry: https://registry.npmjs.org/
+
+      - name: Github package publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public
+          registry: https://npm.pkg.github.com
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
