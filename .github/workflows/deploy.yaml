@@ -117,12 +117,13 @@ jobs:
           access: public
           registry: https://registry.npmjs.org/
 
-      - name: Github package publish
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          access: public
-          registry: https://npm.pkg.github.com
+      # Turns out this actually just publishes to npm again... 
+      # - name: Github package publish
+      #   uses: JS-DevTools/npm-publish@v1
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     access: public
+      #     registry: https://npm.pkg.github.com
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
