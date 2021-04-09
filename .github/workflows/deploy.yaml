@@ -117,13 +117,12 @@ jobs:
           access: public
           registry: https://registry.npmjs.org/
 
-      # Turns out this actually just publishes to npm again... 
-      # - name: Github package publish
-      #   uses: JS-DevTools/npm-publish@v1
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     access: public
-      #     registry: https://npm.pkg.github.com
+      - name: Github package publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          access: public
+          registry: https://npm.pkg.github.com
 
       - name: Delete the v tag
         uses: dev-drprasad/delete-tag-and-release@v0.2.0
