@@ -15,7 +15,7 @@ jobs:
 
       - name: Set version env
         run: |
-          echo "TAG_VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+          echo "TAG_VERSION=test" >> $GITHUB_ENV
           echo "RELEASE_VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
       - name: Test env
         run: |
