@@ -157,6 +157,7 @@ jobs:
             - Second Change
           draft: false
           prerelease: false
+          commitish: main
 
   # checks:
   #   if: github.event_name != 'push'
