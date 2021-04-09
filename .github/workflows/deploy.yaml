@@ -140,7 +140,7 @@ jobs:
           author_name: UnumID Admin
           author_email: admin@unum.id
           message: '[Release] ${{ env.RELEASE_VERSION }}'
-          add: '*'
+          add: '["package.json", "docs/"]'
           branch: main
 
       - name: Create Release
