@@ -94,8 +94,8 @@ jobs:
         with:
           node-version: 12.x
 
-      # - name: Install dependencies
-      #   run: npm install
+      - name: Install dependencies
+        run: npm install
 
       - name: Update source code
         run: |
@@ -103,8 +103,6 @@ jobs:
 
       - name: Create type docs
         run: |
-          npm i -g typedoc
-          npm i -g typescript
           npx typedoc src/index.ts
           
         #- npm publish
